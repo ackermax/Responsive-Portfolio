@@ -92,26 +92,29 @@ aside {
 #head-width {
     width: 960px;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
-    float: left;
-    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
     color: #ffffff;
     background-color: #4aaaa5;
     padding: 10px 25px 10px 25px;
-    z-index: 20;
     width: 273px;
     height: 40px;
     margin: 0 0 0 10px;
 }
 
 nav {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 5px;
     color: #727171;
-    text-align: right;
     padding: 10px 10px 10px 0;
-    z-index: 3;
+    
     margin: 8px auto 0 auto;
 }
 
@@ -236,4 +239,94 @@ footer {
 
 #skull {
     background-image: url(../images/skull.jpg);
+}
+
+@media screen and (max-width: 980px) {
+    #head-width {
+        max-width: 768px;
+    }
+    article {
+        float: none;
+        display: inline-block;
+        width: 60%
+    }
+    aside {
+        float: right;
+        display: inline-block;
+        width: 30%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #head-width {
+        max-width: 640px;
+    }
+
+    #site-body {
+        max-width: 748px;
+    }
+
+    article {
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+    }
+    aside {
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+    } 
+
+    header {
+        float: none;
+        display: inline-block;
+    }
+    nav {
+        float: none;
+        display: inline-block;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    #head-width {
+        max-width: 100%;
+    }
+    #head-bar {
+        height: 120px;
+    }
+
+    #site-body {
+        max-width: 620px;
+    }
+
+    article {
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+    }
+    aside {
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+    } 
+
+    header {
+        text-align: center;
+        float: none;
+        position: relative;
+        width: 100%;
+        margin: 0 0 0 -10px;
+    }
+    nav {
+        float: none;
+        text-align: center;
+        position: relative;
+        margin-left: 0; 
+        width: 100%;
+    }
 }
